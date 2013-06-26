@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0FE21925104D0AA753D68E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 760A431FAEE3416E9F768752 /* libPods.a */; };
 		B41530E0177B70F30028DCB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41530DF177B70F30028DCB9 /* UIKit.framework */; };
 		B41530E2177B70F30028DCB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41530E1177B70F30028DCB9 /* Foundation.framework */; };
 		B41530E4177B70F30028DCB9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41530E3177B70F30028DCB9 /* CoreGraphics.framework */; };
@@ -18,9 +19,14 @@
 		B41530F8177B70F30028DCB9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B41530F7177B70F30028DCB9 /* Default.png */; };
 		B41530FA177B70F30028DCB9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B41530F9177B70F30028DCB9 /* Default@2x.png */; };
 		B41530FC177B70F30028DCB9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B41530FB177B70F30028DCB9 /* Default-568h@2x.png */; };
+		B4153105177B72010028DCB9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4153103177B72010028DCB9 /* ViewController.m */; };
+		B4153106177B72010028DCB9 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4153104177B72010028DCB9 /* ViewController.xib */; };
+		B4153109177B734F0028DCB9 /* FlyingLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B4153108177B734F0028DCB9 /* FlyingLocalizer.m */; };
+		B4153111177B74DB0028DCB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4153113177B74DB0028DCB9 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		760A431FAEE3416E9F768752 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41530DC177B70F30028DCB9 /* Flying Localisation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flying Localisation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41530DF177B70F30028DCB9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B41530E1177B70F30028DCB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +43,15 @@
 		B41530F7177B70F30028DCB9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B41530F9177B70F30028DCB9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B41530FB177B70F30028DCB9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B4153102177B72010028DCB9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B4153103177B72010028DCB9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B4153104177B72010028DCB9 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		B4153107177B734F0028DCB9 /* FlyingLocalizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyingLocalizer.h; sourceTree = "<group>"; };
+		B4153108177B734F0028DCB9 /* FlyingLocalizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyingLocalizer.m; sourceTree = "<group>"; };
+		B4153112177B74DB0028DCB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B4153114177B74E60028DCB9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = file; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B4153115177B74E60028DCB9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B6FCEB1FA5FD4ED787B6A3F3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +62,7 @@
 				B41530E0177B70F30028DCB9 /* UIKit.framework in Frameworks */,
 				B41530E2177B70F30028DCB9 /* Foundation.framework in Frameworks */,
 				B41530E4177B70F30028DCB9 /* CoreGraphics.framework in Frameworks */,
+				AD0FE21925104D0AA753D68E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +75,7 @@
 				B41530E5177B70F30028DCB9 /* Flying Localisation */,
 				B41530DE177B70F30028DCB9 /* Frameworks */,
 				B41530DD177B70F30028DCB9 /* Products */,
+				B6FCEB1FA5FD4ED787B6A3F3 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +93,7 @@
 				B41530DF177B70F30028DCB9 /* UIKit.framework */,
 				B41530E1177B70F30028DCB9 /* Foundation.framework */,
 				B41530E3177B70F30028DCB9 /* CoreGraphics.framework */,
+				760A431FAEE3416E9F768752 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -86,6 +104,12 @@
 				B41530E6177B70F30028DCB9 /* Podfile */,
 				B41530F4177B70F30028DCB9 /* AppDelegate.h */,
 				B41530F5177B70F30028DCB9 /* AppDelegate.m */,
+				B4153102177B72010028DCB9 /* ViewController.h */,
+				B4153103177B72010028DCB9 /* ViewController.m */,
+				B4153107177B734F0028DCB9 /* FlyingLocalizer.h */,
+				B4153108177B734F0028DCB9 /* FlyingLocalizer.m */,
+				B4153104177B72010028DCB9 /* ViewController.xib */,
+				B4153113177B74DB0028DCB9 /* Localizable.strings */,
 				B41530EA177B70F30028DCB9 /* Networking */,
 				B41530E8177B70F30028DCB9 /* Supporting Files */,
 			);
@@ -122,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B41530FF177B70F30028DCB9 /* Build configuration list for PBXNativeTarget "Flying Localisation" */;
 			buildPhases = (
+				FE1154CF62A043E49A2736EA /* Check Pods Manifest.lock */,
 				B41530D8177B70F30028DCB9 /* Sources */,
 				B41530D9177B70F30028DCB9 /* Frameworks */,
 				B41530DA177B70F30028DCB9 /* Resources */,
+				3F416F8DD8FC4BEBB8EE4CA2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,6 +176,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				sv,
 			);
 			mainGroup = B41530D3177B70F30028DCB9;
 			productRefGroup = B41530DD177B70F30028DCB9 /* Products */;
@@ -171,10 +198,43 @@
 				B41530F8177B70F30028DCB9 /* Default.png in Resources */,
 				B41530FA177B70F30028DCB9 /* Default@2x.png in Resources */,
 				B41530FC177B70F30028DCB9 /* Default-568h@2x.png in Resources */,
+				B4153106177B72010028DCB9 /* ViewController.xib in Resources */,
+				B4153111177B74DB0028DCB9 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F416F8DD8FC4BEBB8EE4CA2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		FE1154CF62A043E49A2736EA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B41530D8177B70F30028DCB9 /* Sources */ = {
@@ -184,6 +244,8 @@
 				B41530ED177B70F30028DCB9 /* Flying_LocalisationAPIClient.m in Sources */,
 				B41530F3177B70F30028DCB9 /* main.m in Sources */,
 				B41530F6177B70F30028DCB9 /* AppDelegate.m in Sources */,
+				B4153105177B72010028DCB9 /* ViewController.m in Sources */,
+				B4153109177B734F0028DCB9 /* FlyingLocalizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,8 +256,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				B41530F0177B70F30028DCB9 /* en */,
+				B4153115177B74E60028DCB9 /* sv */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B4153113177B74DB0028DCB9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4153112177B74DB0028DCB9 /* en */,
+				B4153114177B74E60028DCB9 /* sv */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -259,6 +331,7 @@
 		};
 		B4153100177B70F30028DCB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6FCEB1FA5FD4ED787B6A3F3 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Flying Localisation/Flying Localisation-Prefix.pch";
@@ -270,6 +343,7 @@
 		};
 		B4153101177B70F30028DCB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6FCEB1FA5FD4ED787B6A3F3 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Flying Localisation/Flying Localisation-Prefix.pch";
@@ -298,6 +372,7 @@
 				B4153101177B70F30028DCB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
