@@ -8,33 +8,39 @@
 
 #import "FlyingLocalizer.h"
 #import <AFNetworking.h>
+
+static FlyingLocalizer *_shared;
+
 @implementation FlyingLocalizer
 
++ (void)flyWithUrl:(NSString *)url {
+    _shared = [[FlyingLocalizer alloc] initWithUrl:url];
+    [_shared updateFromServer];
+}
+
 + (FlyingLocalizer *)shared {
-    static FlyingLocalizer *_shared;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _shared = [[FlyingLocalizer alloc] init];
-    });
+    if (_shared == nil) {
+        [NSException raise:@"InstanceNotExists"
+                    format:@"Attempted to access instance before initializaion. Please call flyWithUrl: first."];
+    }
     return _shared;
 }
 
-- (id)init {
+- (id)initWithUrl:(NSString *)url {
     self = [super init];
     
     if (self) {
+        self.url = [NSURL URLWithString:url];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateFromServer) name:UIApplicationDidBecomeActiveNotification object:nil];
-        [self updateFromServer];
     }
     
     return self;
 }
 
 - (void)updateFromServer {
-    NSString *url = @"http://localhost/~jensa/response.json";
-    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:self.url];
     [urlRequest addValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    
+    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/plain"]];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:urlRequest success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSDictionary *all = JSON;
         [all enumerateKeysAndObjectsUsingBlock:^(id key, id object, BOOL *stop) {

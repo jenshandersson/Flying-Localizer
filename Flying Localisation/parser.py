@@ -11,8 +11,8 @@ def parse_file(fname):
 		parts = line.split('=')
 		if len(parts) != 2:
 			continue
-		key = ast.literal_eval(parts[0].strip())
-		value = ast.literal_eval(parts[1].strip(' ;'))
+		key = ast.literal_eval(parts[0].strip()).replace('\n','')
+		value = parts[1].strip().strip(';"').replace('\n','')
 		strings[key] = value
 	f.close()
 	return strings
@@ -20,7 +20,6 @@ def parse_file(fname):
 all_dirs = os.walk('.').next()[1]
 
 lang_dirs = [dir for dir in all_dirs if dir.endswith('lproj')]
-
 
 response = {}
 for lang in lang_dirs:

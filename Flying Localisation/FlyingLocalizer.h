@@ -13,6 +13,11 @@
 
 @interface FlyingLocalizer : NSObject
 
+@property (nonatomic) NSURL *url;
+
+- (void)updateFromServer;
+
++ (void)flyWithUrl:(NSString *)url;
 + (NSString *)localizedStringForKey:(NSString *)key defaultString:(NSString *)defaultString;
 
 @end

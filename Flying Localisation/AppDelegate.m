@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "AFNetworkActivityIndicatorManager.h"
+#import "FlyingLocalizer.h"
 
 @implementation AppDelegate
 
@@ -19,6 +20,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     [NSURLCache setSharedURLCache:URLCache];
     
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    [FlyingLocalizer flyWithUrl:@"http://localhost/~jensa/response.json"];
     
     ViewController *viewController = [[ViewController alloc] init];
     

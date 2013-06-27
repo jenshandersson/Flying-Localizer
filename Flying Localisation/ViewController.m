@@ -30,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.titleLabel.text = JALocalizedString(@"title", @"Welcome to 2011");
+    self.titleLabel.text = JALocalizedString(@"InviteYourFriends", @"Welcome to 2011");
     [self.mainButton setTitle:JALocalizedString(@"main_button_title", @"Press here") forState:UIControlStateNormal];
 }
 
